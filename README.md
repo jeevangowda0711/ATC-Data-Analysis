@@ -11,9 +11,9 @@ This repository contains my submissions for the data warehousing exercises as pa
   - Identify top 10 products (films) by profit margin (using ROI %).
   - Bonus: Customers who spent > $1,000 in 2024 (adapted for Sakila data to lifetime spend > $200).
 - **Goal**: Practice GROUP BY, aggregations, and JOINs.
-- **Files**:
-  - [exercise1.sql](./exercise1_sql_drill/exercise1.sql): SQL queries.
-  - [ATC_Data_Analysis_Exercise_1.pdf](./exercise1_sql_drill/ATC_Data_Analysis_Exercise_1.pdf): PDF with query screenshots and results.
+- **Files**: /Exercise 1
+  - exercise1.sql: SQL queries.
+  - ATC_Data_Analysis_Exercise_1.pdf: PDF with query screenshots and results.
 
 Example query output (from PDF screenshots):
 - Total revenue by store: Store 1 (Canada) - $33,000+ revenue.
@@ -28,9 +28,9 @@ Example query output (from PDF screenshots):
   - **Transform**: Clean data (remove nulls), standardize country names (using country_converter), compute profit margin.
   - **Load**: Write cleaned data to SQLite database.
 - **Goal**: Build a complete ETL pipeline.
-- **Files**:
-  - [etl_workflow.ipynb](./exercise2_etl_workflow/etl_workflow.ipynb): Full ETL code and execution.
-  - [10000_sales_records.csv](./exercise2_etl_workflow/10000_sales_records.csv): Source data.
+- **Files**: /Exercise 2
+  - etl_workflow.ipynb: Full ETL code and execution.
+  - 10000_sales_records.csv: Source data.
   - etl_output.db: Generated SQLite DB (table: sales_cleaned with columns like Region, Country_std, Profit_Margin).
 
 Setup: Install dependencies with `pip install pandas sqlalchemy kagglehub country-converter`.
@@ -50,10 +50,8 @@ Preview of transformed data (from notebook):
     - Dim_Customer (customer_key PK, first_name VARCHAR, last_name VARCHAR, gender VARCHAR, age_group VARCHAR, loyalty_status VARCHAR, city VARCHAR, state VARCHAR).
     - Dim_Theater (theater_key PK, theater_name VARCHAR, city VARCHAR, state VARCHAR, number_of_screens INT, seating_capacity INT).
 - **Goal**: Practice dimensional modeling (star schema).
-- **Files**:
-  - [Movie_Theater_Data_Warehouse.drawio.png](./exercise3_schema_design/Movie_Theater_Data_Warehouse.drawio.png): ER diagram image.
-
-![ER Diagram](./exercise3_schema_design/Movie_Theater_Data_Warehouse.drawio.png)
+- **Files**: /Exercise 3
+  - Movie_Theater_Data_Warehouse.drawio.png: ER diagram image.
 
 ## How to Run
 - Exercise 1: Load Sakila DB in MySQL Workbench and run the .sql file.
